@@ -25,12 +25,9 @@ function Book (title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    document.querySelector(".container").innerHTML = "";
+    showLibrary();
 }
-
-
-
-
-///Maybe try to add a different number for each new div created, instead of .books, #books123...
 
 function showLibrary() {
     for (let i = 0; i < myLibrary.length; i++) {
@@ -76,8 +73,33 @@ function showLibrary() {
     }
 }
 
+const confirmButton = document.getElementById("confirmBtn");
+confirmButton.addEventListener("click", () => {
+    const title = document.querySelector("input[type='text']").value;
+    const author = document.querySelector("input[type='text']").value;
+    const pages = document.querySelector("input[type='number']").value;
+    let read;
+    if (document.querySelector("input[type='checkbox']").checked) {
+        read = "Read";
+    } else {
+        read = "Not Read";
+    }
+    addBookToLibrary(title, author, pages, read);
+    document.querySelector("input[type='text']").value = "";
+    document.querySelector("#author").value = "";
+    document.querySelector("input[type='number']").value = "";
+    document.querySelector("input[type='checkbox']").checked = false;
+    dialog.close();
+}); 
 
 
+
+
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read");
+
+addBookToLibrary("The Hobbit2", "J.R.R. Tolkien", 310, "Read");
+
+/* addBookToLibrary("The Hobbit3", "J.R.R. Tolkien", 310, "Read");
 
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read");
 
@@ -91,10 +113,4 @@ addBookToLibrary("The Hobbit2", "J.R.R. Tolkien", 310, "Read");
 
 addBookToLibrary("The Hobbit3", "J.R.R. Tolkien", 310, "Read");
 
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read");
-
-addBookToLibrary("The Hobbit2", "J.R.R. Tolkien", 310, "Read");
-
-addBookToLibrary("The Hobbit3", "J.R.R. Tolkien", 310, "Read");
-
-showLibrary();
+addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 310, "Read"); */

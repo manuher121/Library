@@ -1,3 +1,8 @@
+body {
+    background-color: #c8cac0;
+}
+
+
 .container {
     display: grid;
     margin: auto;
@@ -6,7 +11,7 @@
     grid-gap: 20px;
     height: 600px;
     width: 800px;
-    background-color: #f2f2f2;
+    background-color: #6c8e82;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -16,9 +21,7 @@
 ::backdrop {
     background-image: linear-gradient(
       45deg,
-      magenta,
-      rebeccapurple,
-      dodgerblue,
+      #0F3443,
       green
     );
     opacity: 0.75;
@@ -76,7 +79,7 @@
 }
 
 .books > button {
-    margin: 2px;
+    margin: 5px;
     text-align: center;
     background-color: #b3bb86;
     border: none;
