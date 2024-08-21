@@ -1,0 +1,84 @@
+.container {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 250px 250px 250px;
+    grid-auto-rows: 200px 200px 200px;
+    grid-gap: 20px;
+    height: 600px;
+    width: 800px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
+
+.books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 26px;
+    background-color: #b3cfa1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn > button {
+    margin-top: 10px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    height: 50px;
+    width: 200px;
+    margin: auto;
+}
+
+.title {
+    grid-column: 1 / span 2;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.author {
+    font-size: auto;
+    text-align: center;
+}
+
+.pages {
+    font-size: auto;
+    text-align: center;
+}
+
+.read {
+    grid-column: 1 / span 2;
+    font-size: auto;
+    text-align: center;
+}
+
+.books > button {
+    margin: 2px;
+    text-align: center;
+    background-color: #b3bb86;
+    border: none;
+    border-radius: 5px;
+}
